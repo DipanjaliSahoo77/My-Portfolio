@@ -20,10 +20,30 @@ const ContactForm = () => {
           setEmail("");
           setName("");
           setMessage("");
-          toast.success("Message Sent Successfully!", {
-            position: "top-center",
-            autoClose: 3000,
-          });
+        toast.success(
+  <div>
+    <h4 style={{ margin: 0, color: "#2196f3" }}>Success!</h4>
+    <p style={{ margin: 0 }}>Your message has been sent. Thank you!</p>
+  </div>,
+  {
+    position: "top-center",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    style: {
+      background: "cyan",     
+      color: "black",          
+      border: "1px solid",
+      borderRadius: "30px",
+      boxShadow: "0 2px 10px",
+      fontFamily: "inherit",
+      minWidth: "300px",
+    },
+    icon: "✅",
+  }
+);
         },
         (error) => {
           toast.error("Failed to send message.", {

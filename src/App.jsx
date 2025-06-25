@@ -9,6 +9,8 @@ import ProjectsMain from "./components/projectsSection/ProjectsMain";
 import SkillsMain from "./components/skillsSection/SkillsMain";
 import SubSkills from "./components/skillsSection/SubSkills";
 import SubHeroMain from "./components/subHeroSection/SubHeroMain";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
       <ProjectsMain />
       <ContactMeMain />
       <FooterMain />
+      <ToastContainer position="top-center" /> {/* <-- Add this line */}
     </main>
   );
 }
